@@ -49,7 +49,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link rel="icon" href="/images/logo.svg" sizes="32x32" />
 <link rel="icon" href="/images/logo.svg" sizes="192x192" />
 <link rel="apple-touch-icon" href="/images/logo.svg" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link rel="stylesheet" id="et-core-unified-tb-103-14-cached-inline-styles" href="https://fnfglobalinc.com/wp-content/et-cache/14/et-core-unified-tb-103-14.min.css?ver=1718264886" /><link rel="stylesheet" id="et-core-unified-14-cached-inline-styles" href="https://fnfglobalinc.com/wp-content/et-cache/14/et-core-unified-14.min.css?ver=1718264885" />
 <style id="wpforms-css-vars-root">
 				:root {
@@ -130,13 +130,17 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				
 				
 				
-				
 				<div id="et_mobile_nav_menu">
-				<div class="mobile_nav closed">
-					<span class="select_page">Select Page</span>
-					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
-				</div>
-			</div>			</div> <!-- #et-top-navigation -->
+    <div class="mobile_nav closed">
+        <span class="select_page">Select Page</span>
+        <span class="mobile_menu_bar mobile_menu_bar_toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+    </div>
+</div>
+
+				
+			</div> <!-- #et-top-navigation -->
 		</div> <!-- .container -->
 			</header> <!-- #main-header -->
 <div id="et-main-area">
@@ -1376,5 +1380,74 @@ body, html {
     max-width: 100%;
     overflow-x: hidden;
 }
+/* Mobile Menu Toggle */
+.mobile_menu_bar {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#et_mobile_nav_menu .mobile_nav {
+    position: relative;
+}
+
+#et_mobile_nav_menu .mobile_menu_bar_toggle i {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+}
+
+#et_mobile_nav_menu .select_page {
+    display: none;
+}
+
+#top-menu {
+    display: none;
+}
+
+#top-menu.open {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #006799;
+    z-index: 999;
+}
+
+/* Ensure that the mobile menu is displayed correctly */
+@media only screen and (max-width: 980px) {
+    #top-menu {
+        display: none;
+    }
+
+    .mobile_menu_bar {
+        display: block;
+    }
+
+    #top-menu.open {
+        display: block;
+    }
+}
+
 </style>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var menuToggle = document.querySelector('.mobile_menu_bar_toggle');
+        var menu = document.getElementById('top-menu');
+        
+        menuToggle.addEventListener('click', function () {
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+            } else {
+                menu.classList.add('open');
+            }
+        });
+    });
+</script>
