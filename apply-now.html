@@ -133,15 +133,14 @@
 
 <section class="form-section">
     <div class="form-container" style="text-align: left;">
-        <h1>Request a Quote</h1>
+        <h1>Join Us</h1>
         <form action="https://formspree.io/f/mldrevkj" method="post">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="text" name="company_name" placeholder="Company Name">
-            <input type="text" name="company_address" placeholder="Company Address">
-            <input type="text" name="zip" placeholder="Zip">
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="text" name="phone" placeholder="Phone">
-            <textarea name="freight_details" placeholder="Freight Description/Shipping Details"></textarea>
+            <div style="display: flex; gap: 15px;">
+                <input type="text" name="name" placeholder="Name" required style="flex: 1;">
+                <input type="text" name="phone" placeholder="Phone Number" required style="flex: 1;">
+            </div>
+            <input type="email" name="email" placeholder="Email Address" required style="width: 100%; margin-top: 15px;">
+            <textarea name="message" placeholder="Message" required style="width: 100%; margin-top: 15px;"></textarea>
             
             <div class="checkbox-container" style="margin-top: 15px;">
                 <input type="checkbox" id="terms" name="terms" required>
@@ -155,6 +154,7 @@
         </form>
     </div>
 </section>
+
 
 
 
