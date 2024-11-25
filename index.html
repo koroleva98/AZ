@@ -903,37 +903,58 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 
 					
 					<form class="et_pb_contact_form clearfix" method="post" action="https://formspree.io/f/mldrevkj">
-						<p class="et_pb_contact_field et_pb_contact_field_0 et_pb_contact_field_half" data-id="name" data-type="input">
-				<label for="et_pb_contact_name_0" class="et_pb_contact_form_label">Name</label>
-				<input type="text" id="et_pb_contact_name_0" class="input" value="" name="et_pb_contact_name_0" data-required_mark="required" data-field_type="input" data-original_id="name" placeholder="Name">
-			</p><p class="et_pb_contact_field et_pb_contact_field_1 et_pb_contact_field_half et_pb_contact_field_last" data-id="phone_number" data-type="input">	
-				<label for="et_pb_contact_phone_number_0" class="et_pb_contact_form_label">Phone Number</label>
-				<input type="text" id="et_pb_contact_phone_number_0" class="input" value="" name="et_pb_contact_phone_number_0" data-required_mark="required" data-field_type="input" data-original_id="phone_number" placeholder="Phone Number" pattern="[0-9\s\-]*" title="Only numbers allowed.">
-			</p><p class="et_pb_contact_field et_pb_contact_field_2 et_pb_contact_field_last" data-id="email" data-type="email">
-				<label for="et_pb_contact_email_0" class="et_pb_contact_form_label">Email Address</label>
-				<input type="text" id="et_pb_contact_email_0" class="input" value="" name="et_pb_contact_email_0" data-required_mark="required" data-field_type="email" data-original_id="email" placeholder="Email Address">
-			</p><p class="et_pb_contact_field et_pb_contact_field_3 et_pb_contact_field_last" data-id="message" data-type="text">
-				<label for="et_pb_contact_message_0" class="et_pb_contact_form_label">Message</label>
-				<textarea name="et_pb_contact_message_0" id="et_pb_contact_message_0" class="et_pb_contact_message input" data-required_mark="required" data-field_type="text" data-original_id="message" placeholder="Message"></textarea>
-			</p><p class="et_pb_contact_field et_pb_contact_field_4 et_pb_contact_field_last" data-id="privacy" data-type="checkbox">	
-				<label for="et_pb_contact_privacy_0" class="et_pb_contact_form_label"> </label>
-				<input class="et_pb_checkbox_handle" type="hidden" name="et_pb_contact_privacy_0" data-required_mark="required" data-field_type="checkbox" data-original_id="privacy">
-					<span class="et_pb_contact_field_options_wrapper">
-						<span class="et_pb_contact_field_options_title"> </span>
-						<span class="et_pb_contact_field_options_list"><span class="et_pb_contact_field_checkbox">
-							<input type="checkbox" id="et_pb_contact_privacy_4_0" class="input" value="By entering the phone number, you agree to receive test messages according to our" data-id="-1">
-							<label for="et_pb_contact_privacy_4_0"><i></i>By entering the phone number, you agree to receive test messages according to our <a href="/privacy-policy.html" target="_blank">Privacy Policy</a></label>
-						</span></span>
-					</span>
-			</p>
-						<input type="hidden" value="et_contact_proccess" name="et_pb_contactform_submit_0"/>
-						<div class="et_contact_bottom_container">
-							
-							<button type="submit" name="et_builder_submit_button" class="et_pb_contact_submit et_pb_button" style="background-color: #2ea3f2 !important;" >Submit</button>
-						</div>
-						</style>
-						<input type="hidden" id="_wpnonce-et-pb-contact-form-submitted-0" name="_wpnonce-et-pb-contact-form-submitted-0" value="57484dd25f" /><input type="hidden" name="_wp_http_referer" value="/" />
-					</form>
+    <!-- Name Field -->
+    <p class="et_pb_contact_field et_pb_contact_field_0 et_pb_contact_field_half" data-id="name" data-type="input">
+        <label for="et_pb_contact_name_0" class="et_pb_contact_form_label">Name</label>
+        <input type="text" id="et_pb_contact_name_0" class="input" name="et_pb_contact_name_0" placeholder="Name" required>
+    </p>
+
+    <!-- Phone Number Field -->
+    <p class="et_pb_contact_field et_pb_contact_field_1 et_pb_contact_field_half et_pb_contact_field_last" data-id="phone_number" data-type="input">
+        <label for="et_pb_contact_phone_number_0" class="et_pb_contact_form_label">Phone Number</label>
+        <input type="text" id="et_pb_contact_phone_number_0" class="input" name="et_pb_contact_phone_number_0" placeholder="Phone Number" pattern="[0-9\s\-]*" title="Only numbers allowed." required>
+    </p>
+
+    <!-- Email Address Field -->
+    <p class="et_pb_contact_field et_pb_contact_field_2 et_pb_contact_field_last" data-id="email" data-type="email">
+        <label for="et_pb_contact_email_0" class="et_pb_contact_form_label">Email Address</label>
+        <input type="email" id="et_pb_contact_email_0" class="input" name="et_pb_contact_email_0" placeholder="Email Address" required>
+    </p>
+
+    <!-- Message Field -->
+    <p class="et_pb_contact_field et_pb_contact_field_3 et_pb_contact_field_last" data-id="message" data-type="text">
+        <label for="et_pb_contact_message_0" class="et_pb_contact_form_label">Message</label>
+        <textarea name="et_pb_contact_message_0" id="et_pb_contact_message_0" class="et_pb_contact_message input" placeholder="Message" required></textarea>
+    </p>
+
+    <!-- Privacy Policy Checkbox -->
+    <p class="et_pb_contact_field et_pb_contact_field_4 et_pb_contact_field_last" data-id="privacy" data-type="checkbox">
+        <input class="et_pb_checkbox_handle" type="hidden" name="et_pb_contact_privacy_0">
+        <span class="et_pb_contact_field_options_wrapper">
+            <span class="et_pb_contact_field_options_list">
+                <span class="et_pb_contact_field_checkbox">
+                    <input type="checkbox" id="et_pb_contact_privacy_4_0" class="input" value="Agree" required>
+                    <label for="et_pb_contact_privacy_4_0">
+                        <i></i>
+						</a>.
+                    </label>By checking this box, I agree to receive TEXT messages from AZ Expressline, at the phone number provided above. The SMS frequency may vary. Data rates may apply. Text HELP to (347)603 1999 for assistance. Reply STOP to opt out of receiving SMS messages. See our 
+					<a href="/privacy-policy.html" target="_blank">Privacy Policy & Terms
+                </span>
+            </span>
+        </span>
+    </p>
+
+    <!-- Hidden Fields -->
+    <input type="hidden" value="et_contact_proccess" name="et_pb_contactform_submit_0"/>
+    <input type="hidden" id="_wpnonce-et-pb-contact-form-submitted-0" name="_wpnonce-et-pb-contact-form-submitted-0" value="57484dd25f"/>
+    <input type="hidden" name="_wp_http_referer" value="/"/>
+
+    <!-- Submit Button -->
+    <div class="et_contact_bottom_container">
+        <button type="submit" name="et_builder_submit_button" class="et_pb_contact_submit et_pb_button" style="background-color: #2ea3f2 !important;">Submit</button>
+    </div>
+</form>
+
 
 
 
