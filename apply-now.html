@@ -135,26 +135,33 @@
     <div class="form-container" style="text-align: left;">
         <h1>Join Us</h1>
         <form action="https://formspree.io/f/mldrevkj" method="post">
+            <!-- Name and Phone Fields -->
             <div style="display: flex; gap: 15px;">
-                <input type="text" name="name" placeholder="Name" required style="flex: 1;">
-                <input type="text" name="phone" placeholder="Phone Number" required style="flex: 1;">
+                <input type="text" name="name" placeholder="Name" required style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                <input type="text" name="phone" placeholder="Phone Number" required style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
             </div>
-            <input type="email" name="email" placeholder="Email Address" required style="width: 100%; margin-top: 15px;">
-            <textarea name="message" placeholder="Message" required style="width: 100%; margin-top: 15px;"></textarea>
             
+            <!-- Email Field -->
+            <input type="email" name="email" placeholder="Email Address" required style="width: 100%; margin-top: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            
+            <!-- Message Field -->
+            <textarea name="message" placeholder="Message" required style="width: 100%; margin-top: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+            
+            <!-- SMS Consent Checkbox -->
             <div class="checkbox-container" style="margin-top: 15px;">
-                <input type="checkbox" id="terms" name="terms" required>
+                <input type="checkbox" id="terms" name="terms">
                 <label for="terms" style="font-size: 14px; color: #333;">
                     By checking this box, I agree to receive TEXT messages from AZ Expressline, at the phone number provided above. The SMS frequency may vary. Data rates may apply. Text HELP to (347)603 1999 for assistance. Reply STOP to opt out of receiving SMS messages. See our 
- 
                     <a href="/privacy-policy.html" target="_blank" style="color: #2ea3f2; text-decoration: underline;">Privacy Policy & Terms</a>.
                 </label>
             </div>
-
+            
+            <!-- Submit Button -->
             <button type="submit" style="background-color: #2ea3f2; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-top: 20px;">Submit</button>
         </form>
     </div>
 </section>
+
 
 
 
